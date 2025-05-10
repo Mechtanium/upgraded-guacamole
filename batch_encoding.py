@@ -101,10 +101,9 @@ if __name__ == '__main__':
 
     # For demonstration, using a smaller, publicly accessible model.
     # Replace with "meta-llama/Meta-Llama-3.1-70B" if you have access and resources.
-    # embeddings = batch_encode_sentences(example_sentences, model_name="meta-llama/Meta-Llama-3.1-70B")
+    embeddings = batch_encode_sentences(example_sentences, model_name="meta-llama/Llama-3.1-8B")
     # embeddings = batch_encode_sentences(example_sentences, model_name="sentence-transformers/all-MiniLM-L6-v2", batch_size=2)
-
-    embeddings = batch_encode_sentences(example_sentences, batch_size=2)
+    # embeddings = batch_encode_sentences(example_sentences, batch_size=2)
 
     if embeddings is not None:
         print(f"\nSuccessfully generated embeddings. Shape: {embeddings.shape}")
